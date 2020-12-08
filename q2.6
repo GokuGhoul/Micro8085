@@ -1,1 +1,7 @@
-
+;Num->14
+LDA 8100H
+CMA
+STA 8102H; 1’s Complement
+INR A
+STA 8103H; 2’s Complement
+HLT
