@@ -1,0 +1,21 @@
+LXI H,8040
+MVI D,00
+MOV C,M
+DCR C
+INX H
+Check MOV A,M
+INX H
+CMP M
+JC Next
+MOV B,M
+MOV M,A
+DCX H
+MOV M,B
+INX H
+MVI D 01
+Next DCR C
+JNZ Check
+MOV A D
+RRC
+JC Start
+HLT
